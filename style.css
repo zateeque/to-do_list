@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* styling for webpage background - gradient */
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
+}
+
+/* styling for icon and text background */
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px; /* for rounded edges */
+  }
+
+/* styling for icon background */
+.todo-app h2{
+    color: #002765;
+    display: flex; /* to align text and icon */
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+/* styling for icon image */
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+  }
+
+/* styling for each task row background */
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+  }
+
+/* styling for each task input field */
+/* html tag <input> */
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+  }
+
+  
+/* styling for each task input field */
+/* html tag <button> */
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #ff5945;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+/* styling for the task user adds */
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+ 
+  /* adds circle before each task */
+  /* circle imported from image */
+  ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+  }
+
+  /* styling allowing circle to be checked */
+  ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+  }
+  
+  /* imports check mark from image */
+  /* when selected it will check it off */
+  ul li.checked::before{
+    background-image: url(checked.png);
+  }
+
+  /* styling for cross icon */
+  ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  ul li span:hover{
+    background: #edeef0;
+  }
